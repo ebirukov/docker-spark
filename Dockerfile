@@ -11,7 +11,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install oracle-java8-installer ora
 
 RUN apt-get -y install curl
 RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-1.6.0-bin-hadoop2.6.tgz | tar -xz -C /usr/local/
-RUN cd /usr/local && ln -s spark-1.6.0-bin-hadoop2.4 spark
+RUN cd /usr/local && ln -s spark-1.6.0-bin-hadoop2.6 spark
 ADD scripts/start-master.sh /start-master.sh
 ADD scripts/start-worker /start-worker.sh
 ADD scripts/spark-shell.sh  /spark-shell.sh
